@@ -1,0 +1,142 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  background: #EDF2FF;
+  background: rgb(12, 15, 43);
+  font-family: 'Roboto', sans-serif;
+
+  --bg-clr: rgb(12, 15, 43);
+}
+
+.container {
+  text-align: center;
+  width: 300px;
+  margin: 60px auto;
+}
+
+.img-wrapper {
+  width: 150px;
+  position: relative;
+  margin: auto;
+}
+
+.img-wrapper img {
+  width: 100%;
+  display: block;
+  border-radius: 50%;
+}
+
+.img-wrapper::before {
+  content: "";
+  position: absolute;
+  inset: -15px;
+  border: 6px solid var(--bg-clr);
+  border-top-color: #4263EB;
+  border-bottom-color: #4263EB;
+  border-radius: 50%;
+  z-index: 1;
+  animation: spin 3s linear infinite;
+}
+
+@keyframes spin {
+  to{ transform:rotate(360deg) ; }
+}
+
+h1 {
+  font-size: 32px;
+  color: white;
+  margin-top: 24px;
+  margin-bottom: 8px;
+}
+
+.username {
+  font-family: 'Roboto Mono', monospace;
+  font-weight: 400;
+  color: white;
+  opacity: 0.8;
+  font-size: 18px;
+}
+
+ul {
+  list-style: none;
+  margin: 48px 0px;
+}
+
+ul li a {
+  height: 53px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #4263EB;
+  color: white;
+  text-transform: uppercase;
+  font-size: 14px;
+
+  margin-bottom: 16px;
+  border-radius: 6px;
+
+  transition: background 400ms;
+}
+
+ul li a:hover {
+  background: #364EC7;
+}
+
+.corp {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30vh;
+  background: rgb(12, 15, 43);
+}
+
+.corp .ball {
+  position: relative;
+  bottom: 100px;
+  left: calc(100% - 70px);
+  width: 100px;
+  height: 100px;
+  background: #FFDAAF;
+  border-radius: 50%;
+  animation: ball-move 3s ease-in-out 1s infinite alternate;
+}
+
+.corp .ball::after {
+  position: absolute;
+  content: '';
+  top: 50px;
+  right: 10px;
+  width: 10px;
+  height: 10px;
+  background: #FFF;
+  border-radius: 50%;
+}
+
+.corp .bar {
+  width: 500px;
+  height: 25px;
+  background: #4263EB;
+  border-radius: 30px;
+  transform: rotate(-15deg);
+  animation: up-down 3s ease-in-out 1s infinite alternate;
+}
+
+@keyframes up-down {
+  from{transform: rotate(-15deg);}
+  to {transform: rotate(15deg);}
+}
+
+@keyframes ball-move {
+  from{ left: calc(100% - 70px); 
+  transform: rotate(360deg);}
+  to{ left: calc(0% - 35px);
+  transform: rotate(0deg); }
+}
