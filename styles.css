@@ -4,6 +4,17 @@
   box-sizing: border-box;
 }
 
+p, h1 {
+  cursor: default;
+  pointer-events: none;
+  user-select: none;
+}
+
+img {
+  pointer-events: none;
+  user-select: none;
+}
+
 a {
   text-decoration: none;
 }
