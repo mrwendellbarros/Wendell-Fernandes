@@ -27,6 +27,20 @@ body {
   --bg-clr: rgb(12, 15, 43);
 }
 
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color:  #4263EB;
+  border-radius: 50px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: rgb(12, 15, 43);
+}
+
 .container {
   text-align: center;
   width: 300px;
